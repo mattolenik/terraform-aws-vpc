@@ -325,3 +325,9 @@ variable "default_vpc_tags" {
   description = "Additional tags for the Default VPC"
   default     = {}
 }
+
+variable "amazon_side_asn" {
+  # Will break if nothing is specified, see this:
+  # https://github.com/terraform-aws-modules/terraform-aws-vpc/pull/159
+  default = ""
+}
